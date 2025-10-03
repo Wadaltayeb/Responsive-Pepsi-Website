@@ -1,0 +1,159 @@
+*{
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+body{
+  background: #0162be;
+  
+}
+.logo{
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+}
+header{
+  height: 100px;
+  display: grid;
+  align-content: space-around;
+  font-size: .7rem;
+  font-weight: 500;
+}
+ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+a{
+  text-decoration: none;
+}
+
+main{
+  margin-top: 40px;
+  
+}
+h1{
+  
+  font-size: 2.5rem;
+  font-weight: 900;
+  
+}
+span{
+  font-size: 4rem;
+}
+.pragraph{
+  font-weight: 300;
+  margin: 15px;
+  line-height: 1.5;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 30px;
+  font-weight: 400;
+  background: #fff;
+  color: #000;
+  transition: .5s;
+}
+
+.btn:hover {
+  border: 1px solid #fff;
+  background: none;
+}
+
+.big-pepsi{
+  background-image: url(pepsi_can.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+  width: 220px;
+  height: 400px;
+  animation: move-left 1s ease-out reverse;
+  
+}
+
+.three-pepsi{
+  background-image: url(three_pepsi.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: auto;
+  margin-bottom: 100px;
+  max-width: 200px;
+  min-height: 250px;
+  animation: move-top 1s ease-out reverse ;
+}
+
+/* Animation*/
+
+@keyframes move-left{
+  0{
+    translate: 0;
+  }
+  100%{
+    translate: 50vw;
+  }
+}
+
+@keyframes move-top{
+  0{
+   transform: translateY(0px);
+  }
+  100%{
+    transform: translateY(100px);
+  }
+}
+
+/* Responsive */
+
+/*large screen*/
+
+@media (min-width:900px) {
+  
+  header{
+   grid-template-columns: 100px 1fr;
+    align-content: space-between;
+    align-items: center;
+    margin: 20px 5px;
+    font-size : 25px;
+  }
+  
+  .content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    align-content: space-around;
+    margin: 5px 10%;
+    font-size : 20px;
+    height: 50vh;
+  }
+  .btn{
+    margin-top: 30px;
+  }
+  
+  
+}
+
+/* mobile */
+
+@media (max-width: 600px) {
+  .big-pepsi{
+    display: block;
+    background-size: contain;
+    margin: auto;
+    width: 150px;
+    height: 200px;
+  }
+  .three-pepsi{
+    display: block;
+    margin-top: 10px;
+    min-width: 120px;
+    min-height: 120px;
+  }
+  main{
+    display: block;
+    text-align: center;
+  }
+}
